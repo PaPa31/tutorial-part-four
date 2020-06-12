@@ -1,6 +1,7 @@
 import React from "react"
 import "./gallery.css"
 import { useStaticQuery, graphql } from "gatsby"
+
 const ImageGallery = () => {
   const data = useStaticQuery(graphql`
     query CloudinaryImage {
@@ -13,6 +14,7 @@ const ImageGallery = () => {
       }
     }
   `)
+
   const clImages = data.allCloudinaryMedia.edges
   return (
     <div>
@@ -26,6 +28,7 @@ const ImageGallery = () => {
     </div>
   )
 }
+
 export default ImageGallery
 
 // Here, you query all the Cloudinary images sourced into the `CloudinaryMedia` nodes with the `useStaticQuery` hook. In turn, you map through those image URLs to create a gallery with the component.
