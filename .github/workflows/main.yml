@@ -1,0 +1,22 @@
+name: deploy website
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: amondnet/vercel-action@v19
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
+          vercel-args: "--prod" #Optional
+          vercel-org-id: rTepROAJOiluAAFGiIj5yZ7P
+          vercel-project-id: QmXL87TvyRpRni9eM5ETD9kVtqjDJyjt6YNq5yfh3PVBsd
+          working-directory: ./sub-directory
+          
+          
+     
