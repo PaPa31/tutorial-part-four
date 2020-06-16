@@ -3,7 +3,7 @@ description: "This action make a deployment with github actions instead of Verce
 inputs:
   vercel-token:
     description: "Vercel token"
-    required: true
+    required: false
   vercel-args:
     description: ""
     required: false
