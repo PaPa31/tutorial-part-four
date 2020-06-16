@@ -19,7 +19,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: build
         run: |
-          cd example/
+          cd example/gatsby
           npm ci
           npx ng build --prod
       - uses: ./
@@ -30,7 +30,7 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_ANGULAR }}
-          working-directory: example/
+          working-directory: example/gatsby/dist/gatsby
       - uses: ./
         id: vercel-action-production
         if: github.event_name == 'push'
@@ -39,5 +39,5 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_ANGULAR }}
-          working-directory: example/
+          working-directory: example/gatsby/dist/gatsby
           vercel-args: "--prod "
