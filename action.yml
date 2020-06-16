@@ -56,7 +56,7 @@ outputs:
     description: "deployment preview name"
 runs:
   using: "node12"
-  main: "src/pages/index.js"
+  main: "dist/index.js"
 
 branding:
   icon: "triangle"
