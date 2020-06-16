@@ -9,14 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: amondnet/vercel-action@v19
+      - uses: ./
+        id: vercel-action
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
-          vercel-args: "--prod" #Optional
-          vercel-org-id: rTepROAJOiluAAFGiIj5yZ7P
-          vercel-project-id: QmXL87TvyRpRni9eM5ETD9kVtqjDJyjt6YNq5yfh3PVBsd
+          github-comment: false
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
           working-directory: ./sub-directory
-          
-          
-     
+      - name: preview-url
+        run: |
+          echo ${{ steps.vercel-action.outputs.preview-url }}
