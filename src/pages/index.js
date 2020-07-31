@@ -1,5 +1,4 @@
 import React from "react"
-import { Router } from "@reach/router"
 import { css } from "@emotion/core"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
@@ -8,7 +7,6 @@ import Layout from "../components/layout"
 export default function Home({ data }) {
   return (
     <Layout>
-    <Router basepath="/tutorial-part-four">
       <div>
         <h1
           css={css`
@@ -47,7 +45,6 @@ export default function Home({ data }) {
           </div>
         ))}
       </div>
-    </Router>
     </Layout>
   )
 }
