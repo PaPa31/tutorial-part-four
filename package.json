@@ -33,6 +33,7 @@
     "gatsby-transformer-remark": "^2.8.15",
     "gatsby-transformer-sharp": "^2.5.5",
     "is-url-superb": "^3.0.0",
+    "parse-markdown-links": "^1.0.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
