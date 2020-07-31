@@ -8,6 +8,7 @@ module.exports = {
     description: `A simple description about pandas eating lots...`,
     author: `gatsbyjs`,
   },
+  pathPrefix: "/tutorial-part-four",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
