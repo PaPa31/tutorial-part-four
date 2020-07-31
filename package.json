@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "csv": "node csv.js",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -17,7 +16,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "g": "^2.0.1",
-    "front-matter": "^3.2.1",
     "gatsby": "^2.22.15",
     "gatsby-image": "^2.4.7",
     "gatsby-plugin-emotion": "^4.3.4",
@@ -32,8 +30,6 @@
     "gatsby-transformer-cloudinary": "^0.3.5",
     "gatsby-transformer-remark": "^2.8.15",
     "gatsby-transformer-sharp": "^2.5.5",
-    "is-url-superb": "^3.0.0",
-    "parse-markdown-links": "^1.0.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
