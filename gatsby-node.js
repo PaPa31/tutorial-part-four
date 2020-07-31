@@ -12,22 +12,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions
-
-  // Only update the `/app` page.
-  if (page.path.match(/^\/tutorial-part-four/)) {
-    // page.matchPath is a special key that's used for matching pages
-    // with corresponding routes only on the client.
-    page.matchPath = "/tutorial-part-four/*"
-
-    // Update the page.
-    createPage(page)
-  }
-}
-
 exports.createPages = async ({ graphql, actions }) => {
   // **Note:** The graphql function call returns a Promise
   // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
