@@ -20,7 +20,7 @@ export default function Home({ data }) {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
-              to={node.fields.slug}
+              to=`/tutorial-part-four/${node.fields.slug}`
               css={css`
                 text-decoration: none;
                 color: inherit;
